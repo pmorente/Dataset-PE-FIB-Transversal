@@ -11,7 +11,17 @@ This repository contains data extracted from the official [NASA Exoplanet Archiv
 7. **Spectral Type (st_spectype)**
 8. **Stellar Effective Temperature (st_teff)**
 9. **Radial Velocity (ve(m/s))**
-10. **ISTi, ISTe, IST global**
+
+
+# Introducción General al Estudio
+
+Con el propósito final de determinar qué clase de estrella presenta una mayor probabilidad de hospedar exoplanetas con características similares a la Tierra, emprenderemos un estudio estadístico basado en una muestra aleatoria (véase anexo) compuesta por 1031 planetas confirmados, cada uno de ellos con sus Índices de Similitud Terrestre (IST) debidamente calculados (véase anexo). Este análisis incluirá la aplicación de diversos modelos estadísticos con el fin de comparar las diferentes formas de calcular el IST y los cinco grupos generales de estrellas (A, F, G, K, M).
+
+En una primera fase de nuestro estudio, estudiaremos y compararemos dos de las formas de calcular el Índice de Similitud Terrestre, el IST Interior y el IST Exterior. Los compararemos enfocándonos en la igualación del parámetro μ mediante muestras emparejadas (Y1, Y2), donde Di = μD + 𝜺𝜺i y D = Y1 – Y2, siendo esta última la variable de respuesta. La muestra emparejada estará compuesta por los IST Interior y IST Exterior de cada planeta, los cuales, en conjunto, constituirán nuestra muestra de análisis.
+
+En la segunda fase, realizaremos dos modelos lineales de gran interés, uno de simple y otro de múltiple. El modelo lineal simple intentará predecir el IST Global del exoplaneta mediante la temperatura de su estrella anfitriona, veremos por ejemplo si una mayor temperatura reduce la posibilidad de que exista un planeta con una similitud con la Tierra, o todo lo contrario, la aumenta. Más adelante, realizaremos un modelo lineal múltiple que nos va a permitir calcular el IST Global del exoplaneta mediante su IST Interior y la temperatura de la estrella. Un modelo muy interesante ya que nos permitiría predecir el IST sin tener la temperatura superficial del exoplaneta, un dato que a veces es difícil de obtener.
+
+Por último, cojeremos los dos grupos principales estelares (Grupos M, K) donde los analizaremos y determinaremos qué tipo de estrella tiene una mayor probabilidad de albergar planetas similares a la Tierra. Para realizar este estudio utilizaremos un modelo comparando el parámetro μ en los dos grupos independientes.
 
 ## Sample Data
 
@@ -31,16 +41,10 @@ Here are the first 10 entries of the dataset:
 | WASP-94 A b   | WASP-94 A  | 17.71   | 158.915   | 0.118   | 1604   | F           | 6170    | 33501.58442| 0.09685335605 | 0.02843009722 | 0.05247428255 |
 | WASP-79 b     | WASP-79    | 17.15   | 270.15415 | 0.13    | 1716   | F           | 6600    | 44388.03716| 0.1027742318  | 0.02243636411 | 0.04801958023 |
 ...
+´´´
 
-# Introducción General al Estudio
 
-Con el propósito final de determinar qué clase de estrella presenta una mayor probabilidad de hospedar exoplanetas con características similares a la Tierra, emprenderemos un estudio estadístico basado en una muestra aleatoria (véase anexo) compuesta por 1031 planetas confirmados, cada uno de ellos con sus Índices de Similitud Terrestre (IST) debidamente calculados (véase anexo). Este análisis incluirá la aplicación de diversos modelos estadísticos con el fin de comparar las diferentes formas de calcular el IST y los cinco grupos generales de estrellas (A, F, G, K, M).
 
-En una primera fase de nuestro estudio, estudiaremos y compararemos dos de las formas de calcular el Índice de Similitud Terrestre, el IST Interior y el IST Exterior. Los compararemos enfocándonos en la igualación del parámetro μ mediante muestras emparejadas (Y1, Y2), donde Di = μD + 𝜺𝜺i y D = Y1 – Y2, siendo esta última la variable de respuesta. La muestra emparejada estará compuesta por los IST Interior y IST Exterior de cada planeta, los cuales, en conjunto, constituirán nuestra muestra de análisis.
-
-En la segunda fase, realizaremos dos modelos lineales de gran interés, uno de simple y otro de múltiple. El modelo lineal simple intentará predecir el IST Global del exoplaneta mediante la temperatura de su estrella anfitriona, veremos por ejemplo si una mayor temperatura reduce la posibilidad de que exista un planeta con una similitud con la Tierra, o todo lo contrario, la aumenta. Más adelante, realizaremos un modelo lineal múltiple que nos va a permitir calcular el IST Global del exoplaneta mediante su IST Interior y la temperatura de la estrella. Un modelo muy interesante ya que nos permitiría predecir el IST sin tener la temperatura superficial del exoplaneta, un dato que a veces es difícil de obtener.
-
-Por último, cojeremos los dos grupos principales estelares (Grupos M, K) donde los analizaremos y determinaremos qué tipo de estrella tiene una mayor probabilidad de albergar planetas similares a la Tierra. Para realizar este estudio utilizaremos un modelo comparando el parámetro μ en los dos grupos independientes.
 
 
 
